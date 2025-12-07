@@ -1,0 +1,40 @@
+# OpenSCAD
+*.csg
+*.off
+*.echo
+
+# Exports
+*.stl
+*.3mf
+*.amf
+!exports/*.stl
+!exports/*.3mf
+
+# Editor files
+.DS_Store
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Build artifacts
+build/
+dist/
+*.zip
+
+# Temporary files
+tmp/
+temp/
+cache/
+
+# Images (uncomment if you want to exclude renders)
+# *.png
+# *.jpg
+# *.jpeg
+!images/*.png
+!images/*.jpg
+!images/*.jpeg
+
+# Logs
+*.log
