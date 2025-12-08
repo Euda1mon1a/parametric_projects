@@ -1,7 +1,7 @@
 ---
 name: openscad-library-check
-description: Verify OpenSCAD libraries (BOSL2, Round-Anything) are properly installed and accessible. Use when user mentions OpenSCAD library issues, wants to check if libraries are working before starting a project, or reports "Can't open library" errors. Includes BOSL2 usage guidance, spiral generation best practices, and common troubleshooting patterns.
-version: 1.1
+description: Verify OpenSCAD libraries (BOSL2, Round-Anything) are installed, troubleshoot common issues, understand best practices for spiral generation, and evaluate designs against professional CAD quality standards.
+version: 1.2
 ---
 
 # OpenSCAD Library Check Skill
@@ -239,10 +239,31 @@ OpenSCAD error?
       └─ If no: Check for floating pieces, missing unions
 ```
 
+## Professional CAD Quality Standard
+
+It is a common pitfall to believe a model is "done" simply because it renders without CGAL errors and is printable. This is the standard for a **functional prototype**, not a **professional product**.
+
+When evaluating your design, apply the "Human Standard" test: **Would a professional CAD designer at a major toy or consumer product company ship this design?**
+
+### The Gap Between Functional and Professional
+
+| Feature | Functional Prototype Standard (e.g., v1.4) | Professional Product Standard (e.g., proposed v1.6) |
+| :--- | :--- | :--- |
+| **Edges** | Sharp, mathematical corners. | All touchable edges have fillets or chamfers for comfort and safety. |
+| **Terminations** | Cylinders and walls end abruptly with flat faces. | Terminations are capped, domed, or tapered (e.g., a rounded funnel lip). |
+| **Transitions** | Components intersect at sharp 90° angles. | Major intersections have generous fillets to distribute stress and look deliberate (e.g., pillar-to-base transition). |
+| **Thickness** | Minimum thickness required for printing. | Substantial thickness that conveys robustness and quality. |
+| **Functional Ends** | Paths end abruptly, creating steps or drops. | Paths have smooth "runouts" that blend tangentially into the next surface. |
+
+**Key Takeaway:** Achieving professional quality often requires significantly more effort (e.g., 2x-3x more code) using advanced techniques like `minkowski()` smoothing, custom `rotate_extrude` profiles, and careful boolean operations to manage transitions without breaking geometry.
+
+Don't settle for "raw geometry" if the goal is a finished product.
+
 ## Version History
 
-- v1.0 (2024-12-07): Initial creation with BOSL2/Round-Anything verification
+- **v1.2 (2024-12-08):** Added "Professional CAD Quality Standard" section based on dice tower project learnings.
 - v1.1 (2024-12-07): Added BOSL2 usage notes, spiral generation best practices, common pitfalls
+- v1.0 (2024-12-07): Initial creation with BOSL2/Round-Anything verification
 
 ---
 
