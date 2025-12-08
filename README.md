@@ -24,7 +24,10 @@ parametric_projects/
 ### Active Projects
 *Projects currently in development or iteration*
 
-- Coming soon...
+- **[Corkscrew Wizard Tower Dice Tower](dnd/dice-tower-corkscrew/)** (v1.3 in development)
+  - Helical spiral dice tower with integrated catch tray
+  - Support-free parametric design
+  - See [Design Notes](dnd/dice-tower-corkscrew/DESIGN-NOTES.md) for technical details
 
 ### Completed Projects
 *Stable, tested designs ready for use*
@@ -41,10 +44,13 @@ parametric_projects/
 ### Library Verification
 Before starting work, verify libraries are accessible:
 ```bash
-# Run the library test file
+# Generate and run the library test file
+python3 docs/skills/openscad-library-check/scripts/create_library_test.py
 open ~/Documents/OpenSCAD/library-test.scad
 ```
 Press F5 in OpenSCAD to confirm BOSL2 and Round-Anything load correctly.
+
+See the [OpenSCAD Library Check Skill](docs/skills/openscad-library-check/SKILL.md) for troubleshooting common library issues.
 
 ## Project Template
 
@@ -91,6 +97,12 @@ Steps if applicable...
 ![Printed](images/printed.jpg)
 ```
 
+## Skills & Documentation
+
+The `docs/skills/` directory contains reusable knowledge and troubleshooting guides:
+
+- **[OpenSCAD Library Check](docs/skills/openscad-library-check/SKILL.md)** - Verify BOSL2 and Round-Anything installation, troubleshoot common issues, best practices for spiral generation and geometry
+
 ## Design Principles
 
 1. **Parametric First** - All dimensions should be variables, not magic numbers
@@ -127,4 +139,5 @@ This is a personal repository, but design ideas and improvements are welcome thr
 
 ---
 
-**Status**: 🚧 Repository initialized - projects coming soon
+**Status**: 🚀 Active development - First project (Dice Tower) in progress
+**Last Updated**: 2024-12-08
