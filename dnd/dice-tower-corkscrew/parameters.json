@@ -1,0 +1,14 @@
+{
+    "tower_height": 150,
+    "pillar_diameter": 30,
+    "spiral_diameter": 70,
+    "spiral_rotations": 2.5,
+    "ramp_width": 20,
+    "ramp_thickness": 2,
+    "wall_height": 15,
+    "wall_thickness": 2,
+    "entry_funnel_height": 20,
+    "entry_diameter": 50,
+    "tray_diameter": 90,
+    "tray_depth": 15
+}
